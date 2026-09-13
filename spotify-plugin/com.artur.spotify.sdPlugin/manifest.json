@@ -1,0 +1,109 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "UUID": "com.artur.spotify",
+  "Name": "Spotify",
+  "Version": "1.0.0.0",
+  "Author": "Artur",
+  "Description": "Controls the Spotify desktop app via AppleScript: prev/play-pause/next keys and a now-playing dial (volume, mute, album art).",
+  "Category": "Spotify",
+  "CategoryIcon": "imgs/category",
+  "Icon": "imgs/plugin",
+  "CodePath": "bin/plugin.js",
+  "SDKVersion": 2,
+  "Nodejs": {
+    "Version": "20"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "13"
+    }
+  ],
+  "Software": {
+    "MinimumVersion": "6.9"
+  },
+  "Actions": [
+    {
+      "UUID": "com.artur.spotify.prev",
+      "Name": "Previous",
+      "Icon": "imgs/prev",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/prev"
+        }
+      ],
+      "UserTitleEnabled": false
+    },
+    {
+      "UUID": "com.artur.spotify.playpause",
+      "Name": "Play / Pause",
+      "Icon": "imgs/play",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/play"
+        },
+        {
+          "Image": "imgs/pause"
+        }
+      ],
+      "UserTitleEnabled": false
+    },
+    {
+      "UUID": "com.artur.spotify.next",
+      "Name": "Next",
+      "Icon": "imgs/next",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/next"
+        }
+      ],
+      "UserTitleEnabled": false
+    },
+    {
+      "UUID": "com.artur.spotify.mode",
+      "Name": "Shuffle / Repeat",
+      "Icon": "imgs/shuffle",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/shuffle"
+        }
+      ],
+      "UserTitleEnabled": false
+    },
+    {
+      "UUID": "com.artur.spotify.nowplaying",
+      "Name": "Now Playing",
+      "Icon": "imgs/dial",
+      "Controllers": [
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "imgs/dial"
+        }
+      ],
+      "Encoder": {
+        "layout": "layouts/nowplaying.json",
+        "Icon": "imgs/dial",
+        "StackColor": "#1DB954",
+        "TriggerDescription": {
+          "Rotate": "Volume",
+          "Push": "Mute",
+          "Touch": "Play / Pause"
+        }
+      }
+    }
+  ]
+}

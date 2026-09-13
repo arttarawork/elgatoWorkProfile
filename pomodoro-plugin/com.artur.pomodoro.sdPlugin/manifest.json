@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "UUID": "com.artur.pomodoro",
+  "Name": "Pomodoro",
+  "Version": "1.0.0.0",
+  "Author": "Artur",
+  "Description": "Pomodoro timer on a dial: push = start/pause, rotate = add/remove minutes, tap = skip phase, long tap = reset.",
+  "Category": "Pomodoro",
+  "CategoryIcon": "imgs/tomato",
+  "Icon": "imgs/plugin",
+  "CodePath": "bin/plugin.js",
+  "SDKVersion": 2,
+  "Nodejs": {
+    "Version": "20"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "13"
+    }
+  ],
+  "Software": {
+    "MinimumVersion": "6.9"
+  },
+  "Actions": [
+    {
+      "UUID": "com.artur.pomodoro.timer",
+      "Name": "Pomodoro",
+      "Icon": "imgs/tomato",
+      "Controllers": [
+        "Encoder"
+      ],
+      "States": [
+        {
+          "Image": "imgs/tomato"
+        }
+      ],
+      "Encoder": {
+        "layout": "layouts/pomodoro.json",
+        "Icon": "imgs/tomato",
+        "StackColor": "#E5533D",
+        "TriggerDescription": {
+          "Rotate": "± 1 minute",
+          "Push": "Start / pause",
+          "Touch": "Skip phase",
+          "LongTouch": "Reset"
+        }
+      }
+    }
+  ]
+}
