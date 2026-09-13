@@ -5,7 +5,7 @@
 Controls the **Spotify desktop app on the same Mac** via AppleScript (no Spotify developer app, no OAuth, no Premium needed).
 
 Actions (drag them onto the deck in the Stream Deck app):
-- **Previous / Play-Pause / Next** → keys 34, 35, 36 (bottom row, rightmost three). The play/pause key icon follows the player state.
+- **Previous / Play-Pause / Next / Shuffle-Repeat** keys. Previous and Next show the neighbouring covers, Play/Pause follows the player state, Shuffle/Repeat cycles off → shuffle → repeat → off and shows the current mode. Place them wherever you like (Artur: prev 35, next 36, play/pause 26).
 - **Now Playing** → dial 6. Rotate = Spotify volume (5 % per tick), push = mute/unmute, touch = play/pause.
   The strip shows song, artist, position/duration and album art; background colour comes from the artwork, text is black or white for contrast; titles longer than ~13 chars scroll.
 
