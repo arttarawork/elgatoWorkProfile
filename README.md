@@ -12,14 +12,14 @@ Actions (drag them onto the deck in the Stream Deck app):
 ### Neighbour artwork on the Previous / Next keys (Spotify Web API)
 The desktop app's AppleScript only exposes the current track, so the queue (next) and listening history (previous) come from the Web API:
 1. Create an app once at https://developer.spotify.com/dashboard with redirect URI exactly `http://127.0.0.1:8888/callback` and the Web API enabled.
-2. Put its Client ID in `spotify-plugin/com.artur.spotify.sdPlugin/.env` as `SPOTIFY_CLIENT_ID=…` (see `.env.example`; the file is git-ignored and travels inside the packed installer).
+2. Put its Client ID in `spotify-plugin/com.artur.spotify.sdPlugin/client.env` as `SPOTIFY_CLIENT_ID=…` (see `client.env.example`; the file is git-ignored and travels inside the packed installer).
 3. On each machine the plugin opens a Spotify consent page in the browser on first launch; approve it once. The refresh token is kept in the Stream Deck app's global settings for this plugin.
 Without a Client ID the keys keep the plain art-coloured icons. "Previous" shows the last *played* track, which is usually but not always where Spotify's Previous goes.
 
 ### Set up from a fresh clone (e.g. the work laptop)
 ```sh
 git clone <this repo> elgatoWorkProfile && cd elgatoWorkProfile
-cp spotify-plugin/com.artur.spotify.sdPlugin/.env.example spotify-plugin/com.artur.spotify.sdPlugin/.env   # then paste the Client ID
+cp spotify-plugin/com.artur.spotify.sdPlugin/client.env.example spotify-plugin/com.artur.spotify.sdPlugin/client.env   # then paste the Client ID
 (cd spotify-plugin/com.artur.spotify.sdPlugin && npm install --omit=dev)
 (cd pomodoro-plugin/com.artur.pomodoro.sdPlugin && npm install --omit=dev)
 # for development: symlink the folders into the app (needs the Stream Deck app installed)

@@ -5,7 +5,7 @@ import { createHash, randomBytes } from "node:crypto";
 import { execFile } from "node:child_process";
 import streamdeck from "@elgato/streamdeck";
 
-try { process.loadEnvFile(new URL("../.env", import.meta.url).pathname); } catch {} // <plugin>/.env, git-ignored
+try { process.loadEnvFile(new URL("../client.env", import.meta.url).pathname); } catch {} // <plugin>/client.env, git-ignored
 export const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID ?? "PASTE_YOUR_SPOTIFY_CLIENT_ID";
 const REDIRECT = "http://127.0.0.1:8888/callback";
 const SCOPES = "user-read-playback-state user-read-recently-played";
